@@ -1,0 +1,188 @@
+
+.barNav{
+  width: 0;
+  height: 0;
+  /* display: block;
+  z-index: 1; */
+ 
+} 
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   width: 10%;
+   left: 50px;
+   top:20px;
+   z-index: 1;
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #d8dcdd;
+   transition: color 0.3s ease;
+   
+ }
+ 
+ 
+ #menuToggle .burger
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #c4a35a;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle  #active ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #c4a35a;
+ }
+ 
+ /*
+  * But let's hide the middle one#
+  */
+ #menuToggle  #active ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle  #active ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   height: 95vh;
+
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+    transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+    
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 50px 0;
+   font-size: 22px;
+   color:#d8dcdd;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+
+  #menuToggle  #active ~ #menu 
+ {
+   transform: none;
+ } 
+
+ /* #menuToggle a:active 
+ {
+   transform: none;
+ }  */
+
+ @media screen and (max-width: 500px){
+
+  .title_doctopills{
+    z-index:-2 ;
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 20px;
+    left:100px;
+    text-align: center;
+    bottom: 0;
+    width: 50%;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color:#0596de;
+    margin-top: 20px;
+  }
+  
+  .barNav{
+    display: block;
+    z-index: 1;
+   
+  }
+   #menuToggle
+   {
+     display: block;
+     position: relative;
+     width: 10%;
+     left: 25px;
+     top:-25px;
+     
+     z-index: 1;
+     
+     -webkit-user-select: none;
+     user-select: none;
+   }
+
+
+ }

@@ -1,0 +1,47 @@
+#containerContact{
+    background-color: #000000;
+    height: 100%;
+    border-top: 5px solid #c4a35a;
+}
+
+#containerContact h3{
+    color:#c66b3d;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+#contactText{
+    width: 30%;
+    margin: auto;
+    color: white;
+}
+
+#formulaire{
+    background-color: #111010;
+    border-radius: 10px;
+    width: 50%;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#formulaire textarea{
+    width: 70%;
+    height: 40%;
+}
+
+.boutonEmail{
+    background-color: #111010;
+    width: 200px;
+    height: 30px;
+    color: white;
+    border:2px solid #c4a35a;
+    border-radius: 5px;
+}
