@@ -14,7 +14,7 @@ useEffect(()=>{
 },[])
 
 const getSkills = () => {
-    Axios.get('http://localhost:3001/competence')
+    Axios.get('http://localhost:3002/competence')
     .then(res => setSkills(res.data))
 }
     
@@ -24,9 +24,9 @@ const getSkills = () => {
        
         <div id='competence' className='containerSkill'>
             <div id='containerListSkill'>
-				<div>
+				<div className='listSkill'>
               <h3>Compétences</h3>
-              
+              <div className="blocSkill">
               {skills.map(skill => {
                   return(
                       <>
@@ -35,6 +35,7 @@ const getSkills = () => {
                       </>  
                   )
               })}
+			  </div>
               </div>
             </div>
             <div id='containerLogoSkills'>

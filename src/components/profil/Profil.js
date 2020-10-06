@@ -1,15 +1,20 @@
 import React from 'react'
 import './profil.css'
 import photos from '../../assets/photosProfile.png'
+import ButtonCv from './ButtonCv'
 
 const Profil = () => {
     return(
         <div id='profil' className='containerProfil'>
             <div id='containerImage'>
-            {/* <img src={photos}  id="cercle"/> */}
+            <img src={photos}  id="cercle"/> 
             </div>
                 <div id='containerTexteProfil'>
-               <p>Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non gravissima sint, sed quia nunc sine teste dico.</p>    
+               <p>Ayant suivi une formation pour devenir developpeur fullstack, je suis actuellement à la recherche d'un stage 
+                   pour compléter ma formation.
+                   J'ai efféctué des projets ou j'ai pu travailler sur le front comme sur le back que je vous invite à aller voir dans section mes créations.
+                   </p>    
+              <ButtonCv/>
             </div>
         </div>
     )

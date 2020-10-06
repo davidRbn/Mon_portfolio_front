@@ -29,3 +29,15 @@
     font-size: x-large;
 }
 
+@media screen and (max-width: 800px){
+
+
+    #titleLanding h1{
+        font-size:70px;
+        text-align: center;
+        
+    }
+
+
+
+}

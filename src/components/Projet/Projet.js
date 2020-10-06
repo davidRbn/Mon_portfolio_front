@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './projet.css'
 import Axios from 'axios'
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Projet = () => {
 
@@ -12,13 +14,26 @@ useEffect(()=> {
 })
 
 const getProjet = () => {
-Axios.get('http://localhost:3001/projet')
+Axios.get('http://localhost:3002/projet')
 .then(res => setProjets(res.data))
+}
+
+const settings = {
+    className:'slide',
+    arrows:true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay:true,
+    autoplaySpeed:2000,
+    infinite:true,
+    slidesToShow: 1,
+    slidesToScroll: 1
 }
     return (
         <div id='containerProjets'>
         <h3>Mes créations</h3>
-        <div className='sectionProjet'>
+        <Slider {...settings}>
         {projets.map(projet => {
             return(
                 <div id='projet'>
@@ -30,8 +45,9 @@ Axios.get('http://localhost:3001/projet')
                 </div>
             )
         })}
+        </Slider>
         </div>
-        </div>
+        
     )
 }
 
