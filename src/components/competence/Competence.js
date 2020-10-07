@@ -14,7 +14,7 @@ useEffect(()=>{
 },[])
 
 const getSkills = () => {
-    Axios.get('http://localhost:3002/competence')
+    Axios.get('https://blooming-beyond-04058.herokuapp.com/competence')
     .then(res => setSkills(res.data))
 }
     

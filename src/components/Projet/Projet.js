@@ -14,7 +14,7 @@ useEffect(()=> {
 })
 
 const getProjet = () => {
-Axios.get('http://localhost:3002/projet')
+Axios.get('https://blooming-beyond-04058.herokuapp.com/projet')
 .then(res => setProjets(res.data))
 }
 
