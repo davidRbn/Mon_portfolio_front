@@ -20,7 +20,29 @@
     font-size: 100px;
     color:#d8dcdd ;
     margin-bottom: 0;
-    
+    animation: anim 5s;
+}
+
+@keyframes anim {
+    from{
+          transform: translateY(-50px);
+          opacity: 0;
+    }
+    to{
+          transform : translateY(0);
+          opacity:1;
+    }
+}
+
+@keyframes anim2{
+    from{
+           transform: translateX(-200px);
+           opacity: 0;
+    }
+    to{
+           transform: translateX(0);
+           opacity: 1;
+    }
 }
 
 #titleLanding p {
@@ -28,6 +50,7 @@
     color: #c4a35a;
     margin-bottom: 20px;
     font-size: x-large;
+    animation: anim2 5s;
 }
 
 @media screen and (max-width: 800px){
